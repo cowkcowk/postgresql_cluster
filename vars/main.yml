@@ -24,7 +24,7 @@ synchronous_mode_strict: false  # if 'true' then block all client writes to the 
 synchronous_node_count: 1  # number of synchronous standby databases
 
 # Load Balancing
-with_haproxy_load_balancing: false  # or 'true' if you want to install and configure the load-balancing
+with_haproxy_load_balancing: true  # or 'true' if you want to install and configure the load-balancing
 haproxy_listen_port:
   master: 5000
   replicas: 5001
@@ -612,4 +612,6 @@ netdata_conf:
   page_cache_size: 64  # Determines the amount of RAM in MiB that is dedicated to caching Netdata metric values.
   dbengine_disk_space: 1024  # Determines the amount of disk space in MiB that is dedicated to storing Netdata metric values.
 
+remove_postgres: true
+remove_etcd: true
 ...
